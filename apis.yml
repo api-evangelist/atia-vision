@@ -1,10 +1,22 @@
 aid: atia-vision
 name: Atia Vision
-description: 'Atia Vision is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Atia Vision, Inc. is a clinical-stage ophthalmic medical device company headquartered in
+  Campbell, California, and a portfolio company of the Shifamed medical innovation hub. It
+  develops the OmniVu modular shape-changing intraocular lens (IOL) — a two-part implant
+  pairing a fluid-filled, shape-changing base with an exchangeable fixed-power front optic —
+  designed to work with the eye's natural accommodative mechanism to restore a full range of
+  functional vision in cataract patients, and implanted using conventional cataract surgical
+  technique. The company raised a $20M Series D and a $42M Series E, and in May 2025 the U.S.
+  Food and Drug Administration granted it an Investigational Device Exemption to begin a
+  feasibility clinical study of the OmniVu Lens System; the device is investigational and is
+  not approved for sale or use in the United States. Atia Vision is an implantable-device
+  manufacturer: it publishes no developer program, no public API, and no machine-readable
+  specification.
 url: https://raw.githubusercontent.com/api-evangelist/atia-vision/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-listing: https://forgeglobal.com/atia-vision_stock/
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,12 +24,47 @@ created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Medical Devices
+- Ophthalmology
+- Intraocular Lens
+- Cataract Surgery
+- Health
+- Clinical Stage
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Atia Vision is a clinical-stage implantable-device maker whose product is the OmniVu
+    intraocular lens, not software — no api./docs./developer./portal. host resolves in DNS,
+    no atiavision GitHub organization exists, no npm/PyPI package is published, and every
+    path on the marketing site (including a random control path) is answered identically by
+    a SiteGround `sg-captcha: challenge` interstitial, so there is no developer surface to
+    read behind it either.
+  evidence:
+  - url: https://api.github.com/orgs/atiavision
+    status: 404
+  - url: https://atiavision.com/openapi.json
+    status: 202
+  - url: https://atiavision.com/.well-known/agent-card.json
+    status: 202
+  - url: https://registry.npmjs.org/atia-vision
+    status: 404
+  checked: '2026-08-06'
 common:
+- type: DomainSecurity
+  url: security/atia-vision-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/atia-vision_stock/
+  url: https://atiavision.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/atia-vision
